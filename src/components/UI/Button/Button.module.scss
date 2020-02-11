@@ -1,0 +1,28 @@
+.Button {
+  width: 280px;
+  height: 40px;
+  color: white;
+  background-color: #000000;
+  border: none;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 35px;
+  text-align: center;
+  margin: 10px 0;
+
+  &:hover {
+    cursor: pointer;
+    position: relative;
+    &::after {
+      content: '';
+      display: inline-block;
+      margin-left: 10px;
+      width: 35px;
+      height: 10px;
+      background-image: url('/img/Button__arrow.svg');
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
+  }
+}

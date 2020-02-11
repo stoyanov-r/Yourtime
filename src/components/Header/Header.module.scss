@@ -1,0 +1,36 @@
+.Header {
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin-top: 15px;
+    align-items: center;
+  }
+  &__nav {
+    display: flex;
+    width: 90px;
+    margin: 20px 0 0 auto;
+    button {
+      margin: 0 auto;
+      padding: 0;
+      width: 22px;
+      height: 22px;
+      border: none;
+      background-image: url('/img/Header__burger.svg');
+      background-repeat: no-repeat;
+      font-size: 0;
+      &:hover {
+        cursor: pointer;
+        fill: red;
+      }
+    }
+    ul {
+      display: flex;
+      list-style: none;
+      
+    }
+  }
+  &__contacts {
+    display: flex;
+  }
+}

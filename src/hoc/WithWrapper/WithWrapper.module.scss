@@ -1,0 +1,19 @@
+.WithWrapper {
+  width: 290px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+
+  @media (min-width: 1024px) {
+    width: 944px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 1200px;
+  }
+
+  @media (min-width: 1920px) {
+    width: 1600px;
+  }
+}
