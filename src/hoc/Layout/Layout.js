@@ -9,23 +9,31 @@ import Booking from '../../components/Booking/Booking';
 import Contacts from '../../components/Contacts/Contacts';
 
 
-// class ShowWindowDimensions extends React.Component {
-  //   state = { width: 0, height: 0 };
-  //   render() {
-  //     return <span>Window size: {this.state.width} x {this.state.height}</span>;
-  //   }
-  //   updateDimensions = () => {
-  //     this.setState({ width: window.innerWidth, height: window.innerHeight });
-  //   };
-  //   componentDidMount() {
-  //     window.addEventListener('resize', this.updateDimensions);
-  //   }
-  //   componentWillUnmount() {
-  //     window.removeEventListener('resize', this.updateDimensions);
-  //   }
-  // }
-
 export class Layout extends Component {
+
+  state = {
+    winWidth: 320,
+  };
+
+  updateDimensions = () => {
+    this.setState({ winWidth: window.innerWidth });
+  };
+
+  componentDidMount() {
+    window.addEventListener('resize', this.updateDimensions);
+  };
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions);
+  };
+
+  shouldComponentUpdate() {
+    if (this.state.winWidth > 700) {
+      return true
+    }
+    return false
+  }
+
   render() {
     return (
       <div className={classes.Layout}>
@@ -33,7 +41,7 @@ export class Layout extends Component {
           <button>UA</button>
           <button>RU</button>
         </div> */}
-        <Header />
+        <Header isMenuOpen={this.state.isMenuOpen} winWidth={this.state.winWidth} />
         <main>
           <Headline />
           <About />

@@ -1,0 +1,37 @@
+.Icons {
+  display: flex;
+  justify-content: center;
+}
+.Icon {
+  width: 29px;
+  height: 29px;
+  margin: 30px 7px;
+  margin-top: 0;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  &.none {
+    display: none;
+  }
+
+  &.facebook {
+    font-size: 0;
+    background-image: url("/img/Socials__FB.svg");
+  }
+
+  &.instagram {
+    font-size: 0;
+    background-image: url("/img/Socials__Instagram.svg");
+  }
+}
+
+@media (min-width: 1024px) {
+  .Icons {
+    align-items: center;
+
+    .Icon {
+      margin-bottom: 0;
+    }
+  }
+}

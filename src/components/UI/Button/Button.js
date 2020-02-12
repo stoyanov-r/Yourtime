@@ -1,11 +1,11 @@
 import React from 'react';
 import classes from './Button.module.scss'
 
-const Button = props => {
+const Button = ({text = 'Забронировать'}) => {
   return (
-    <button style={props.styles} className={classes.Button}>
-      {props.text}
-    </button>
+    <a href='https://clients.aihelps.com/110043' className={classes.Button}>
+      {text}
+    </a>
   );
 }
 

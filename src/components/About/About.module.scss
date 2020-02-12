@@ -1,0 +1,101 @@
+.About {
+  h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    margin: 70px auto 28px auto;
+  }
+}
+
+.text {
+  font-size: 18px;
+  line-height: 35px;
+
+  a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .directions {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    width: 100px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+    margin-bottom: 80px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: 28px;
+      width: 44px;
+      height: 44px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+    }
+
+    &:hover {
+      cursor: pointer;
+      &:first-child::before {
+        background-image: url("/img/About__barber--color.svg");
+      }
+      &:nth-child(2)::before {
+        background-image: url("/img/About__visage--color.svg");
+      }
+      &:nth-child(3)::before {
+        background-image: url("/img/About__cosmetology--color.svg");
+      }
+      &:nth-child(4)::before {
+        background-image: url("/img/About__lectory--color.svg");
+      }
+      &:nth-child(5)::before {
+        background-image: url("/img/About__ceratin--color.svg");
+      }
+    }
+    &:first-child::before {
+      background-image: url("/img/About__barber.svg");
+    }
+    &:nth-child(2)::before {
+      background-image: url("/img/About__visage.svg");
+    }
+    &:nth-child(3)::before {
+      background-image: url("/img/About__cosmetology.svg");
+    }
+    &:nth-child(4)::before {
+      background-image: url("/img/About__lectory.svg");
+    }
+    &:nth-child(5)::before {
+      background-image: url("/img/About__ceratin.svg");
+    }
+    &:nth-child(6)::before {
+      background-image: url("/img/About__bar.svg");
+    }
+  }
+}
+
+.button {
+  display: none;
+}

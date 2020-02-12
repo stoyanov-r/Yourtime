@@ -1,12 +1,15 @@
 import React from 'react';
-import Button from '../UI/Button/Button';
+import classes from './Headline.module.scss'
+import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
 
 const Headline = () => {
   return (
-    <section>
-      <h1>Yourtime | beauty-coworking</h1>
-      <p>Аренда бьюти-мест от часа | Площадка для МК</p>
-      <Button />
+    <section className={classes.Headline}>
+      <WithWrapper>
+        <h1><strong>Yourtime</strong> beauty-coworking</h1>
+        <p>Аренда бьюти-мест от часа | Площадка для МК</p>
+        <div className={classes.button}><a href={'#Price__headline'}>Узнать цену</a></div>
+      </WithWrapper>
     </section>
   );
 }

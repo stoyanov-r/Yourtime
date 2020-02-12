@@ -1,31 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classes from './Header.module.scss'
-import Socials from '../Socials/Socials';
+import Icons from '../Icons/Icons';
 import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
 import Button from '../UI/Button/Button';
+import Auxiliary from '../../hoc/Auxiliary/Auxiliary'
 
 
-const Header = () => {
+const Header = ({ winWidth }) => {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+
+  const menuList =
+    [
+      { name: 'О нас', anchor: '#About__headline' },
+      { name: 'Цены', anchor: '#About__headline' },
+      { name: 'Как забронировать?', anchor: '#About__headline' },
+      { name: 'Контакты', anchor: '#About__headline' },
+    ]
   return (
     <header className={classes.Header}>
       <WithWrapper>
-        <div className={classes.Header__logo}>
+        <div className={classes.logo}>
           <a href='/'><img src='/img/Header__logo.svg' alt='Yourtime' /></a>
         </div>
-        <nav className={classes.Header__nav}>
-          <button className={classes.cross}>Menu</button>
-          {/* <ul>
-            <li><a>О нас</a></li>
-            <li><a>Цены</a></li>
-            <li><a>Как забронировать?</a></li>
-            <li><a>Контакты</a></li>
-          </ul> */}
+        <nav className={classes.nav}>
+          <button
+            className={isMenuOpen ? classes.cross : null}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >Menu</button>
+          {isMenuOpen && <Auxiliary>
+            <ul>
+              {menuList.map((item, i) =>
+                <li key={'menu' + i}>
+                  <a href={item.anchor}>{item.name}</a>
+                </li>
+              )}
+            </ul>
+            <div className={classes.contacts}>
+              <Icons types={['facebook', 'instagram']} />
+              <a href='tel:+380632430644'>+380632430644</a>
+            </div>
+          </Auxiliary>
+          }
         </nav>
-        {/* <div className={classes.Header__contacts}>
-          <Socials />
-          <a href='tel:+380632430644'>+380632430644</a>
-        </div> */}
-        <Button text={'Забронировать'}/>
+        <div className={classes.booking}>
+          <Button text={'Забронировать'} />
+        </div>
       </WithWrapper>
 
     </header>

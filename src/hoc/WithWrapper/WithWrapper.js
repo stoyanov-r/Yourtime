@@ -3,7 +3,7 @@ import classes from './WithWrapper.module.scss'
 
 const WithWrapper = props => {
   return (
-    <div style={props.style} className={classes.WithWrapper}>
+    <div style={props.styles} className={classes.WithWrapper}>
       {props.children}
     </div>
   );
