@@ -37,8 +37,12 @@ const Header = ({ winWidth }) => {
               )}
             </ul>
             <div className={classes.contacts}>
-              <Icons types={['facebook', 'instagram']} />
-              <a href='tel:+380632430644'>+380632430644</a>
+              <Icons 
+                types={[
+                  {key: 'facebook', href:'https://www.facebook.com/yourtime.coworking'}, 
+                  {key: 'instagram', href: 'https://www.instagram.com/yourtime.coworking/'}
+                  ] }  />
+              <a className={classes.tel} href='tel:+380632430644'>+380632430644</a>
             </div>
           </Auxiliary>
           }

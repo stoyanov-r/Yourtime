@@ -7,9 +7,11 @@ const Icons = ({ types = ['none'] }) => {
     <div className={classes.Icons}>
       {types.map((type, index) => {
         const cls = [classes.Icon]
-        cls.push(classes[type])
+        cls.push(classes[type.key])
         return (
-          <div key={type + index} className={cls.join(' ')}>{type}</div>
+          <a href={type.href} key={type + index} className={cls.join(' ')}>
+            {type.key}
+          </a>
         )
       })}
     </div>

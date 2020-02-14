@@ -71,7 +71,7 @@
   .contacts {
     text-align: center;
     width: 100%;
-    a {
+    .tel {
       color: black;
       font-weight: bold;
       text-decoration: none;
@@ -119,7 +119,7 @@
       display: flex;
       width: 220px;
       margin-bottom: 5px;
-      a {
+      .tel {
         line-height: 67px;  
       }
     }
