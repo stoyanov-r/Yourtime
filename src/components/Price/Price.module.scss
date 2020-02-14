@@ -2,7 +2,7 @@
 .Price {
   width: 100%;
   margin: 0 auto;
-  
+  margin-bottom: 100px;
 
   h2 {
     width: 200px;
@@ -15,4 +15,25 @@
 .slider {
   width: 290px;
   margin: 0 auto;
+}
+
+.button {
+display: none;
+}
+
+@media (min-width: 1024px) {
+  .Price {
+    h2 {
+      width: 100%;
+    }
+  }
+
+  .slider {
+    width: 944px;
+  }
+  .button {
+    display: block;
+    width: 384px;
+    margin: 0 auto;
+  }
 }

@@ -7,6 +7,7 @@ import Advantages from '../../components/Advantages/Advantages';
 import Price from '../../components/Price/Price';
 import Booking from '../../components/Booking/Booking';
 import Contacts from '../../components/Contacts/Contacts';
+import Reviews from '../../components/Reviews/Reviews';
 
 
 export class Layout extends Component {
@@ -48,6 +49,7 @@ export class Layout extends Component {
           <Advantages />
           <Price />
           <Booking />
+          <Reviews />
           <Contacts />
         </main>
         <footer>

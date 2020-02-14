@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 // import { SampleNextArrow, SamplePrevArrow } from '../UI/Arrows/Arrows';
 import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
+import Button from '../UI/Button/Button'
 
 const priceList = [
   {
@@ -22,7 +23,7 @@ const priceList = [
   },
   {
     title: 'РАБОЧЕЕ МЕСТО ВИЗАЖИСТА ',
-    prices: ['1 час - 50 грн', '3 часа - 125 грн', '15 смен - 1400 грн', 'День - 150 грн'],
+    prices: ['1 час - 50 грн', '3 часа - 125 грн', 'День - 150 грн', '15 смен - 1400 грн'],
     sources: ['/img/Price__cosmetology.jpg'],
     description: 'В нашем центре создано 4 оборудованных места визажиста с правильной грим-подсветкой. Для формирования своего портфолио также предусмотрен профессиональный софтбокс и фотозона, а для проведения полноценных фотосессий – большой 3-метровый фотофон. Бесплатно предоставляется: бациллол, стериллиум, бумажные полотенца, ватные диски, ватные палочки, специальная лампа для идеальных портретов.'
   },
@@ -34,9 +35,24 @@ const Price = () => {
     className: "center",
     infinite: true,
     centerPadding: "60px",
-    slidesToShow: 1,
+    slidesToShow: 4,
     swipeToSlide: true,
     arrow: false,
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 1,
+          infinite: true,
+        }
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+    ]
     // nextArrow: <SampleNextArrow />,
     // prevArrow: <SamplePrevArrow />
   };
@@ -50,6 +66,9 @@ const Price = () => {
           <Slider {...settings}>
             {priceList.map((item, i) => <PriceItem item={item} key={'item' + i} />)}
           </Slider>
+        </div>
+        <div className={classes.button}>
+          <Button />
         </div>
       </WithWrapper>
     </section>

@@ -12,7 +12,8 @@ const PriceItem = ({ item }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    swipeToSlide: false,
+    swipe: false,
+    arrow: false,
   };
   return (
     <section className={classes.PriceItem}>
@@ -32,12 +33,14 @@ const PriceItem = ({ item }) => {
           )}
         </ul>
         <div className={classes.description}>
-          <p>{item.description}</p>
+
           {isMoreClicked
             ? <div className={classes.gradient}>
+              <p>{item.description}<span></span></p>
               <button onClick={() => setisMoreClicked(!isMoreClicked)} className={classes.more}>Подробнее</button>
             </div>
             : <div className={classes.noGradient}>
+              <p>{item.description}</p>
               <button onClick={() => setisMoreClicked(!isMoreClicked)} className={classes.more}>Скрыть</button>
             </div>
           }
