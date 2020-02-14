@@ -55,6 +55,8 @@
       li {
         margin: 20px auto;
         a {
+          box-sizing: border-box;
+
           color: black;
           text-decoration: none;
 
@@ -104,10 +106,9 @@
 
         li {
           margin: 0 17px 5px 17px;
-          &:last-child {
-            // margin-right: 0;
-          }
+
           a {
+            padding: 2px;
             line-height: 67px;
           }
         }
@@ -119,7 +120,7 @@
       width: 220px;
       margin-bottom: 5px;
       a {
-        line-height: 67px;
+        line-height: 67px;  
       }
     }
 

@@ -1,0 +1,43 @@
+.Photogallery {
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  
+  img {
+    width: 271px;
+    height: 271px;
+    padding: 18px 10px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  li {
+    display: block;
+    margin: 5px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+    &:first-child {
+      background-color: #000000;
+    }
+  }
+
+  @media(min-width: 1024px) {
+    margin-top: 25px;
+    img {
+      width: 368px;
+      height: 368px;
+    }
+  }
+}
+

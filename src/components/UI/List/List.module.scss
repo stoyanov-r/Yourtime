@@ -1,0 +1,70 @@
+.List {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    width: 135px;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    position: relative;
+    margin-top: 100px;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-22px);
+      display: block;
+      width: 44px;
+      height: 44px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+$About__clses: "barber", "visage", "cosmetology", "lectory", "ceratin", "bar";
+$Advantages__clses: "0", "1", "2", "3", "4", "5";
+@each $item in $About__clses {
+  .#{$item}::before {
+    background-image: url("/img/About__#{$item}.svg");
+  }
+
+  li:hover.#{$item}::before {
+    background-image: url("/img/About__#{$item}--color.svg");
+  }
+}
+
+@each $item in $Advantages__clses {
+  .Advantages__#{$item}::before {
+    background-image: url("/img/Advantages__#{$item}.svg");
+  }
+}
+
+@media (min-width: 1024px) {
+  .List {
+    ul{
+      justify-content: space-between;
+    }
+    li {
+      font-size: 16px;
+      line-height: 24px;
+      margin-right: 45px;
+      &:before {
+
+      }
+    }
+  }
+}

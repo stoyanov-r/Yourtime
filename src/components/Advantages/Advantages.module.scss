@@ -1,0 +1,44 @@
+.Advantages {
+  display: flex;
+  background-image: url("/img/Advantages__bg.png");
+
+  h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    padding-top: 40px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 35px;
+    margin: 20px auto;
+  }
+
+  li {
+    width: 100%;
+    &::before {
+      top: -70px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    p {
+      font-size: 20px;
+      line-height: 35px;
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+
+    li {
+      width: 30%;
+      margin-top: 100px;
+      margin-right: 0;
+    }
+  }
+}

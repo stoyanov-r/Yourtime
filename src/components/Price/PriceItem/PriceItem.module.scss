@@ -1,0 +1,92 @@
+.PriceItem {
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin-top: 40px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  li {
+    width: 140px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 25px;
+    list-style: none;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+.more {
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  padding: 5px;
+  width: 112px;
+  margin: 0 auto;
+  margin-top: 70px;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+  }
+}
+
+.slider {
+  order: -1;
+  img {
+    padding-bottom: 10px;
+  }
+}
+
+p.rent {
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.description {
+  position: relative;
+}
+
+.gradient {
+  top: 0;
+  display: flex;
+  align-items: start;
+  position: absolute;
+  z-index: 5;
+  background-image: linear-gradient(transparent 0%, white 20%);
+  height: 100%;
+  width: 100%;
+}
+
+.noGradient {
+  display: flex;
+  .more {
+    margin: 0 auto;
+  }
+}

@@ -8,7 +8,7 @@ import Auxiliary from '../../hoc/Auxiliary/Auxiliary'
 
 const Header = ({ winWidth }) => {
 
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuList =
     [
