@@ -1,0 +1,35 @@
+.Reviews {
+  background: #f3f4f5;
+  padding-bottom: 53px; 
+
+  h2 {
+    width: 100%;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+    margin: 18px auto;
+    margin-top: 40px;
+  }
+}
+
+.slider {
+  width: 100%;
+  margin: 0 auto;
+
+  img {
+    width: 95%;
+    margin: 0 2.5%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slider {
+    img {
+      margin: 0 17px;
+    }
+    h2 {
+      margin: 50 auto;
+    }
+  }
+}

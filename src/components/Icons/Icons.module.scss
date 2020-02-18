@@ -1,31 +1,69 @@
 .Icons {
   display: flex;
   justify-content: center;
-  
 }
 .Icon {
   display: block;
   width: 29px;
   height: 29px;
-  margin: 30px 7px;
+  margin: 0 7px;
   margin-top: 0;
   font-size: 0;
 
+  a {
+    display: block;
+  }
+
   &:hover {
     cursor: pointer;
-    opacity: 0.5;
-  }
-  &.none {
-    display: none;
+    // opacity: 0.5;
   }
 
-  &.facebook {
-    background-image: url("/img/Socials__FB.svg");
-  }
+}
+$Socials__clses: "instagram", "facebook", "telegram", "gps";
 
-  &.instagram {
-    background-image: url("/img/Socials__Instagram.svg");
+@each $item in $Socials__clses {
+  .#{$item} {
+    background-image: url("/img/Socials__#{$item}.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    &:hover {
+      background-image: url("/img/Socials__#{$item}--color.svg");
+    }
   }
+}
+
+// .instagram {
+//   background-image: url("/img/Socials__instagram.svg");
+//   &:hover {
+//     background-image: url("/img/Socials__instagram--color.svg");
+//   }
+// }
+
+// .facebook {
+//   background-image: url("/img/Socials__facebook.svg");
+//   color: #000000;
+//   &:hover {
+//     background-image: url("/img/Socials__facebook--color.svg");
+//   }
+// }
+// .telegram {
+//   background-image: url("/img/Socials__telegram.svg");
+//   color: #000000;
+//   &:hover {
+//     background-image: url("/img/Socials__telegram--color.svg");
+//   }
+// }
+// .gps {
+//   background-image: url("/img/Socials__gps.svg");
+//   color: #000000;
+//   &:hover {
+//     background-image: url("/img/Socials__gps--color.svg");
+//   }
+// }
+
+.none {
+  display: none;
 }
 
 @media (min-width: 1024px) {

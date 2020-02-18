@@ -1,0 +1,52 @@
+.Calendar {
+  width: 290px;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 35px;
+
+  a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin: 5px 3px;
+    font-size: 16px;
+    line-height: 35px;
+    opacity: 0.3;
+    &:hover {
+      cursor: default;
+    }
+  }
+
+  .past {
+    opacity: 0.5;
+  }
+
+  .present {
+    opacity: 1;
+    &:hover {
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 2px 6px 10px 0 #868686;
+    }
+  }
+
+  .future {
+    opacity: 0.3;
+  }
+}
+
+.week {
+  width: 35px;
+  height: 20px;
+  margin: 5px 3px;
+  text-align: center;
+  vertical-align: bottom;
+}

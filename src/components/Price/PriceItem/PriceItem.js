@@ -21,7 +21,7 @@ const PriceItem = ({ item }) => {
       <div className={classes.slider}>
         <Slider {...settings}>
           {item.sources.map((src, i) =>
-            <img onClick={e => Slider.slickNext} alt={item.title} src={src} key={'img' + i} />
+            <img alt={item.title} src={src} key={'img' + i} />
           )}
         </Slider>
       </div>
