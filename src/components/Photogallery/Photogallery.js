@@ -12,7 +12,7 @@ const Photogallery = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     swipe: true,
-    arrow: false,
+    arrows: false,
   };
 
   const urls = new Array(2).fill('')

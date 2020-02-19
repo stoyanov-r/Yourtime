@@ -8,7 +8,7 @@ const Headline = () => {
       <WithWrapper>
         <h1><strong>Yourtime</strong> beauty-coworking</h1>
         <p>Аренда бьюти-мест от часа | Площадка для МК</p>
-        <div className={classes.button}><a href={'#Price__headline'}>Узнать цену</a></div>
+        <div className={classes.button}><a href={'#Price'} id='About'>Узнать цену</a></div>
       </WithWrapper>
     </section>
   );

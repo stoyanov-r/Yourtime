@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
 import Slider from 'react-slick';
 import classes from './Reviews.module.scss';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
+import SliderButton from '../UI/SliderButton/SliderButton';
 
 const images = new Array(5)
   .fill('')
@@ -33,23 +34,46 @@ const settings = {
   ]
 };
 
-const Reviews = () => {
-  return (
-    <section className={classes.Reviews}>
-      <WithWrapper>
-        <h2>Отзывы</h2>
-        <div className={classes.slider}>
-        <Slider {...settings}>
-          {images.map((img, i) =>
-            <div className={classes.img}  key={'review-' + i}><img
-              src={img}
-              alt={'Отзывы наших посетителей'}
-            /> </div>)}
-        </Slider>
-        </div>
-      </WithWrapper>
-    </section>
-  );
+class Reviews extends PureComponent {
+
+  constructor(props) {
+    super(props);
+    this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
+  }
+
+  next() {
+    this.slider.slickNext();
+  }
+
+  previous() {
+    this.slider.slickPrev();
+  }
+
+  render() {
+    return (
+      <section className={classes.Reviews}>
+        <WithWrapper>
+          <h2>Отзывы</h2>
+          <div className={classes.slider}>
+            <div className={classes.previous}>
+              <SliderButton onClick={this.previous} />
+            </div>
+            <Slider ref={c => (this.slider = c)} {...settings}>
+              {images.map((img, i) =>
+                <div className={classes.img} key={'review-' + i}><img
+                  src={img}
+                  alt={'Отзывы наших посетителей'}
+                /> </div>)}
+            </Slider>
+            <div className={classes.next}>
+              <SliderButton onClick={this.next} />
+            </div>
+          </div>
+        </WithWrapper>
+      </section>
+    );
+  }
 }
 
 export default Reviews;

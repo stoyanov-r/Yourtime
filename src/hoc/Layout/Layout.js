@@ -14,7 +14,7 @@ import Footer from '../../components/Footer/Footer';
 export class Layout extends Component {
 
   state = {
-    winWidth: 320,
+    winWidth: window.innerWidth,
   };
 
   updateDimensions = () => {
@@ -30,7 +30,7 @@ export class Layout extends Component {
   };
 
   shouldComponentUpdate() {
-    if (this.state.winWidth > 700) {
+    if (this.state.winWidth > 1023) {
       return true
     }
     return false

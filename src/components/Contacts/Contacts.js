@@ -11,7 +11,7 @@ const Contacts = ({ winWidth }) => {
   return (
     <section className={classes.Contacts}>
       <WithWrapper>
-        <h2>Контакты</h2>
+        <h2 id='Contacts'>Контакты</h2>
         <div className={classes.icons}>
           <Icons
             types={[
@@ -37,9 +37,9 @@ const Contacts = ({ winWidth }) => {
         </div>
         <section className={classes.calendar}>
           <div className={classes.booking}>
-            {winWidth < 1023
-              ? <p>Узнать свободные даты</p>
-              : <Button text='Узнать свободные даты' />
+            {winWidth > 1023
+              ? <Button text='Узнать свободные даты' />
+              : <p>Узнать свободные даты</p>
             }
           </div>
           <div className={classes.dates}>

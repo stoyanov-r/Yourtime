@@ -77,8 +77,8 @@
 
   .booking {
     width: 282px;
-    
     order: 1;
+    margin-left: 40px;
   }
 
   .calendar {
@@ -87,9 +87,9 @@
 
   .map {
     iframe {
-      width: 500px;
-      height: 300px;
-      margin: - 300px 0 90px auto;
+      width: 520px;
+      height: 340px;
+      margin: -350px 0 90px auto;
       border: 2px solid #000000;
     }
   }

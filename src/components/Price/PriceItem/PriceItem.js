@@ -17,7 +17,7 @@ const PriceItem = ({ item }) => {
   };
   return (
     <section className={classes.PriceItem}>
-      <h3>{item.title}</h3>
+      <h3 id={item.id}>{item.title}</h3>
       <div className={classes.slider}>
         <Slider {...settings}>
           {item.sources.map((src, i) =>
@@ -26,7 +26,7 @@ const PriceItem = ({ item }) => {
         </Slider>
       </div>
       <div>
-        <p className={classes.rent}>Аренда рабочего кабинета:</p>
+        <p className={classes.rent}>Аренда рабочего места:</p>
         <ul>
           {item.prices.map((price, i) =>
             <li key={'price' + i}>{price}</li>

@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className={classes.Footer}>
       <WithWrapper>
         <p>YOURTIME | Beauty-coworking 2019-{now.getFullYear()}</p>
-        <p><a href='#'>Условия Аренды</a></p>
+        <p><a href='#Price__headline'>Условия Аренды</a></p>
         <p>Developed by <a href='https://www.linkedin.com/in/roman-stoyanov/'> Stoyanov Roman</a></p>
       </WithWrapper>
     </footer>

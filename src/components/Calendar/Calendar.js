@@ -71,6 +71,7 @@ const Calendar = () => {
 
   return (
     <div className={classes.Calendar}>
+      <h3 className={classes.month}>{months[today.getMonth()].month}</h3>
       {week}
       {prevMonth}
       {thisMonth}

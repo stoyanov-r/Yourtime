@@ -8,20 +8,20 @@ import Auxiliary from '../../hoc/Auxiliary/Auxiliary'
 
 const Header = ({ winWidth }) => {
 
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect (() => {
     if (winWidth > 1023) {
       setIsMenuOpen(true, winWidth)
-    }
+    } 
   })
 
   const menuList =
     [
-      { name: 'О нас', anchor: '#About__headline' },
-      { name: 'Цены', anchor: '#About__headline' },
-      { name: 'Как забронировать?', anchor: '#About__headline' },
-      { name: 'Контакты', anchor: '#About__headline' },
+      { name: 'О нас', anchor: '#About' },
+      { name: 'Цены', anchor: '#Price' },
+      { name: 'Как забронировать?', anchor: '#Booking' },
+      { name: 'Контакты', anchor: '#Contacts' },
     ]
   return (
     <header className={classes.Header}>

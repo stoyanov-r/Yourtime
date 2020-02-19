@@ -1,6 +1,6 @@
 .Reviews {
   background: #f3f4f5;
-  padding-bottom: 53px; 
+  padding-bottom: 53px;
 
   h2 {
     width: 100%;
@@ -16,6 +16,8 @@
 .slider {
   width: 100%;
   margin: 0 auto;
+  position: relative;
+  padding: 18px 25px;
 
   img {
     width: 95%;
@@ -23,13 +25,42 @@
   }
 }
 
+.previous,
+.next {
+  position: absolute;
+  top: 250px;
+  z-index: 5;
+  right: 0;
+  :hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+
+.previous {
+  top: 246px;
+  left: 0;
+  right: auto;
+  transform: rotate(180deg);
+}
+
 @media (min-width: 1024px) {
   .slider {
     img {
       margin: 0 17px;
     }
-    h2 {
-      margin: 50 auto;
-    }
+  }
+
+  .Reviews h2 {
+    margin-bottom: 50px;
+  }
+
+  .previous,
+  .next {
+    top: 300px;
+  }
+
+  .previous {
+    top: 296px;
   }
 }

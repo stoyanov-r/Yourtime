@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './Arrows.module.scss'
 
 export function SampleNextArrow(props) {
   const { className, style, onClick } = props;
