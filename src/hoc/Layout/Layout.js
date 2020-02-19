@@ -8,6 +8,7 @@ import Price from '../../components/Price/Price';
 import Booking from '../../components/Booking/Booking';
 import Contacts from '../../components/Contacts/Contacts';
 import Reviews from '../../components/Reviews/Reviews';
+import Footer from '../../components/Footer/Footer';
 
 
 export class Layout extends Component {
@@ -50,11 +51,9 @@ export class Layout extends Component {
           <Price />
           <Booking />
           <Reviews />
-          <Contacts />
+          <Contacts winWidth={this.state.winWidth}/>
         </main>
-        <footer>
-
-        </footer>
+          <Footer />
       </div>
     );
   }

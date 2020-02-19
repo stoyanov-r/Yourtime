@@ -1,0 +1,31 @@
+.Footer {
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13px;
+  line-height: 35px;
+
+  p {
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    &:hover {
+      font-weight: 500;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .Footer {
+    justify-content: space-between;
+    p {
+      width: 30%;
+    }
+  }
+}

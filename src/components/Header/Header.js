@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classes from './Header.module.scss'
 import Icons from '../Icons/Icons';
 import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
@@ -8,7 +8,13 @@ import Auxiliary from '../../hoc/Auxiliary/Auxiliary'
 
 const Header = ({ winWidth }) => {
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
+
+  useEffect (() => {
+    if (winWidth > 1023) {
+      setIsMenuOpen(true, winWidth)
+    }
+  })
 
   const menuList =
     [

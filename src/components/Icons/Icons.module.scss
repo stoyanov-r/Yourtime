@@ -20,7 +20,7 @@
   }
 
 }
-$Socials__clses: "instagram", "facebook", "telegram", "gps";
+$Socials__clses: "instagram", "viber", "facebook", "telegram", "gps";
 
 @each $item in $Socials__clses {
   .#{$item} {

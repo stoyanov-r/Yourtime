@@ -1,7 +1,10 @@
 .Contacts {
+  display: flex;
+  flex-direction: column;
   h2 {
     width: 100%;
     text-align: center;
+    margin-top: 60px;
   }
 }
 
@@ -11,8 +14,16 @@
   margin-bottom: 30px;
 }
 
+.last {
+  order: 1;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
 .calendar {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 
   p {
     font-weight: 600;
@@ -22,7 +33,15 @@
 }
 
 .map {
-  width: 100%;
+  width: 944px;
+  margin: 0 auto;
+  display: flex;
+  iframe {
+    width: 100%;
+    height: 320px;
+    order: 1;
+    overflow: hidden;
+  }
 }
 
 .link {
@@ -31,4 +50,47 @@
   line-height: 35px;
   color: #000000;
   text-decoration: none;
+}
+
+.booking {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 35px;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .Contacts {
+    h2 {
+      margin-bottom: 50px;
+    }
+  }
+
+  .icons {
+    width: 30%;
+    margin: 1.5%;
+  }
+
+  .last {
+    order: initial;
+  }
+
+  .booking {
+    width: 282px;
+    
+    order: 1;
+  }
+
+  .calendar {
+    width: 400px;
+  }
+
+  .map {
+    iframe {
+      width: 500px;
+      height: 300px;
+      margin: - 300px 0 90px auto;
+      border: 2px solid #000000;
+    }
+  }
 }

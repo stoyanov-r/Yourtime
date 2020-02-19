@@ -12,19 +12,23 @@
     font-size: 24px;
     line-height: 37px;
     text-align: center;
-    +p {
+    + p {
       text-align: center;
     }
   }
   p {
-    font-size: 16px;
-    line-height: 23px;
+    padding: 10px;
+    font-size: 17px;
+    line-height: 35px;
   }
 
-  a {
+  p a, ol a {
     text-decoration: none;
     color: #000000;
-    font-weight: 500;
+    font-weight: bold;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   ol {
@@ -34,7 +38,7 @@
     margin: 0 auto;
     list-style: none;
   }
-  
+
   li {
     margin-top: 75px;
     text-align: center;
@@ -57,13 +61,29 @@
 
 .socials {
   font-weight: 600;
-font-size: 18px;
-line-height: 35px;
-text-align: center;
+  font-size: 18px;
+  line-height: 35px;
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
-  
+  .wrapper {
+    padding: 30px 12px;
+    h2 {
+      margin-bottom: 5px;
+    }
+    ol {
+      flex-direction: row;
+      margin-top: 60px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  .socials {
+    margin-top: 30px;
+  }
 }
-
-
