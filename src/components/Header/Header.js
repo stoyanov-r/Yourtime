@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import classes from './Header.module.scss'
 import Icons from '../Icons/Icons';
 import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
 import Button from '../UI/Button/Button';
-import Auxiliary from '../../hoc/Auxiliary/Auxiliary'
 
+const menuList =
+    [
+      { name: 'О нас', anchor: '#About' },
+      { name: 'Цены', anchor: '#Price' },
+      { name: 'Как забронировать?', anchor: '#Booking' },
+      { name: 'Контакты', anchor: '#Contacts' },
+    ]
 
 const Header = ({ winWidth }) => {
 
@@ -12,17 +18,10 @@ const Header = ({ winWidth }) => {
 
   useEffect (() => {
     if (winWidth > 1023) {
-      setIsMenuOpen(true, winWidth)
+      setIsMenuOpen(true)
     } 
-  })
+  }, [winWidth])
 
-  const menuList =
-    [
-      { name: 'О нас', anchor: '#About' },
-      { name: 'Цены', anchor: '#Price' },
-      { name: 'Как забронировать?', anchor: '#Booking' },
-      { name: 'Контакты', anchor: '#Contacts' },
-    ]
   return (
     <header className={classes.Header}>
       <WithWrapper>
@@ -34,7 +33,7 @@ const Header = ({ winWidth }) => {
             className={isMenuOpen ? classes.cross : null}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >Menu</button>
-          {isMenuOpen && <Auxiliary>
+          {isMenuOpen && <Fragment>
             <ul>
               {menuList.map((item, i) =>
                 <li key={'menu' + i}>
@@ -50,11 +49,11 @@ const Header = ({ winWidth }) => {
                   ] }  />
               <a className={classes.tel} href='tel:+380632430644'>+380632430644</a>
             </div>
-          </Auxiliary>
+          </Fragment>
           }
         </nav>
         <div className={classes.booking}>
-          <Button text={'Забронировать'} />
+          <Button />
         </div>
       </WithWrapper>
 

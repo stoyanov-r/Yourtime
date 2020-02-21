@@ -51,10 +51,10 @@ export class Layout extends Component {
           <Price />
           <Booking />
           <Reviews />
-          <Contacts winWidth={this.state.winWidth}/>
+          <Contacts winWidth={this.state.winWidth} />
         </main>
-          <Footer />
-      </div>
+        <Footer />
+      </div >
     );
   }
 }

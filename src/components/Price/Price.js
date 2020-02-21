@@ -9,6 +9,30 @@ import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
 import Button from '../UI/Button/Button'
 import SliderButton from '../UI/SliderButton/SliderButton';
 
+const settings = {
+  className: "center",
+  infinite: true,
+  centerPadding: "60px",
+  slidesToShow: 3,
+  swipeToSlide: true,
+  arrow: false,
+  responsive: [
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 1,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+  ]
+};
+
 const priceList = [
   {
     title: 'Косметический кабинет',
@@ -49,31 +73,7 @@ class Price extends PureComponent {
     this.slider.slickPrev();
   }
 
-  settings = {
-    className: "center",
-    infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 3,
-    swipeToSlide: true,
-    arrow: false,
-    responsive: [
-      {
-        breakpoint: 1023,
-        settings: {
-          slidesToShow: 1,
-          infinite: true,
-        }
-      },
-      {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
-    ]
-    // nextArrow: <SampleNextArrow />,
-    // prevArrow: <SamplePrevArrow />
-  };
+  
 
 
   render() {
@@ -86,7 +86,7 @@ class Price extends PureComponent {
             <div className={classes.previous}>
               <SliderButton text='previous' onClick={this.previous} />
             </div>
-            <Slider ref={c => (this.slider = c)} {...this.settings}>
+            <Slider ref={c => (this.slider = c)} {...settings}>
               {priceList.map((item, i) => <PriceItem item={item} key={'item' + i} />)}
             </Slider>
             <div className={classes.next}>

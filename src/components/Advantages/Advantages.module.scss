@@ -1,12 +1,13 @@
 .Advantages {
   display: flex;
   background-image: url("/img/Advantages__bg.png");
+  padding: 10px;
 
   h2 {
     font-weight: 500;
     font-size: 24px;
     line-height: 35px;
-    padding-top: 40px;
+    padding-top: 30px;
     text-align: center;
     margin: 0 auto;
   }
@@ -20,6 +21,7 @@
 
   li {
     width: 100%;
+    margin-top: 100px;
     &::before {
       top: -70px;
       width: 60px;

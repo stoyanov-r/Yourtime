@@ -1,6 +1,7 @@
 .Reviews {
   background: #f3f4f5;
   padding-bottom: 53px;
+  padding-top: 22px;
 
   h2 {
     width: 100%;
@@ -9,11 +10,11 @@
     line-height: 35px;
     text-align: center;
     margin: 18px auto;
-    margin-top: 40px;
   }
 }
 
 .slider {
+  box-sizing: border-box;
   width: 100%;
   margin: 0 auto;
   position: relative;
