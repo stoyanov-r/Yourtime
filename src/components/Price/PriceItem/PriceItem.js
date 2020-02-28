@@ -13,7 +13,7 @@ const PriceItem = ({ item }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     swipe: false,
-    arrow: false,
+    arrows: false,
   };
   return (
     <section className={classes.PriceItem}>
@@ -27,9 +27,9 @@ const PriceItem = ({ item }) => {
       </div>
       <div>
         <p className={classes.rent}>Аренда рабочего места:</p>
-        <ul>
+        <ul className={classes.list}>
           {item.prices.map((price, i) =>
-            <li key={'price' + i}>{price}</li>
+            <li className={classes.listItem} key={'price' + i}>{price}</li>
           )}
         </ul>
         <div className={classes.description}>

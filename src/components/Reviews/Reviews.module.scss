@@ -21,7 +21,7 @@
   padding: 18px 25px;
 
   img {
-    width: 95%;
+    width: 92%;
     margin: 0 2.5%;
   }
 }
@@ -29,7 +29,7 @@
 .previous,
 .next {
   position: absolute;
-  top: 250px;
+  top: 204px;
   z-index: 5;
   right: 0;
   :hover {
@@ -39,7 +39,7 @@
 }
 
 .previous {
-  top: 246px;
+  top: 200px;
   left: 0;
   right: auto;
   transform: rotate(180deg);
@@ -48,7 +48,7 @@
 @media (min-width: 1024px) {
   .slider {
     img {
-      margin: 0 17px;
+      margin: 0 12px 0 14px;
     }
   }
 
@@ -58,10 +58,10 @@
 
   .previous,
   .next {
-    top: 300px;
+    top: 254px;
   }
 
   .previous {
-    top: 296px;
+    top: 250px;
   }
 }

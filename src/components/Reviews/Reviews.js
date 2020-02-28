@@ -8,7 +8,7 @@ import SliderButton from '../UI/SliderButton/SliderButton';
 
 const images = new Array(5)
   .fill('')
-  .map((_, i) => `/img/Reviews-${i}.jpg`)
+  .map((_, i) => `/img/Reviews/Reviews--${i}.jpg`)
 
 const settings = {
   className: "center",

@@ -3,12 +3,12 @@ import classes from './Advantages.module.scss'
 import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
 import List from '../UI/List/List';
 const Advantages = () => {
-  
+
   const advatagesList = [
     {
       text: 'Не нужно вносить плату за первый и последний месяц.',
       cls: 'Advantages__0'
-    }, 
+    },
     {
       text: 'Появился клиент? Просто бронируй место онлайн в любое время, без подтверждений. ',
       cls: 'Advantages__1'

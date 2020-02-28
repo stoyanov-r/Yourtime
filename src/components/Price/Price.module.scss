@@ -26,7 +26,7 @@
 .previous,
 .next {
   position: absolute;
-  top: 317px;
+  top: 338px;
   z-index: 5;
   right: 0;
   :hover {
@@ -37,13 +37,14 @@
 
 .previous {
   transform: rotate(180deg);
-  top: 321px;
+  top: 342px;
   right: auto;
   left: 0;
 }
 
 @media (min-width: 1024px) {
   .Price {
+    padding-bottom: 50px;
     h2 {
       width: 100%;
     }
@@ -60,10 +61,10 @@
 
   .previous,
   .next {
-    top: 341px;
+    top: 364px;
   }
 
   .previous {
-    top: 344px;
+    top: 367px;
   }
 }

@@ -36,7 +36,7 @@ const Header = ({ winWidth }) => {
           {isMenuOpen && <Fragment>
             <ul>
               {menuList.map((item, i) =>
-                <li key={'menu' + i}>
+                <li className={classes.link} key={'menu' + i}>
                   <a href={item.anchor}>{item.name}</a>
                 </li>
               )}

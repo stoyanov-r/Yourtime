@@ -15,8 +15,8 @@ const Photogallery = () => {
     arrows: false,
   };
 
-  const urls = new Array(2).fill('')
-    .map((_, i) => `/img/About__gallery-${i}.jpg`)
+  const urls = new Array(7).fill('')
+    .map((_, i) => `/img/About/About__gallery--${i}.jpg`)
 
   return (
     <div className={classes.Photogallery}>

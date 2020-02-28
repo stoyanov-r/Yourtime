@@ -11,29 +11,30 @@
     align-items: center;
     text-transform: uppercase;
     margin: 15px 0;
-  }
-
-  ul {
-    min-height: 50px;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  li {
-    width: 135px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 25px;
-    list-style: none;
+    padding-top: 25px;
   }
 
   p {
     font-size: 14px;
     line-height: 25px;
   }
+}
+
+.list {
+  min-height: 50px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.listItem {
+  width: 135px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  list-style: none;
 }
 
 .more {
