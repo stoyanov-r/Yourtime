@@ -16,7 +16,7 @@
 
   &:hover {
     cursor: pointer;
-    // opacity: 0.5;
+    opacity: 0.5;
   }
 
 }
@@ -27,9 +27,9 @@ $Socials__clses: "instagram", "viber", "facebook", "telegram", "gps";
     background-image: url("/img/Socials__#{$item}.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    &:hover {
-      background-image: url("/img/Socials__#{$item}--color.svg");
-    }
+    // &:hover {
+    //   // background-image: url("/img/Socials__#{$item}--color.svg");
+    // }
   }
 }
 

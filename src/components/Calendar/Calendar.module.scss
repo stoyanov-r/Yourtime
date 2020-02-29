@@ -1,10 +1,12 @@
 .Calendar {
   width: 290px;
+  min-height: 350px;  
   display: flex;
   flex-wrap: wrap;
   font-weight: 500;
   font-size: 13px;
   line-height: 35px;
+  position: relative;
 
   a {
     font-family: Arial, Helvetica, sans-serif;
@@ -25,15 +27,23 @@
     }
   }
 
-  .month {
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 35px;
-    text-transform: uppercase;
-    margin: 0;
+  .previous,
+  .next {
+    position: absolute;
+    right: 0;
+    :hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
   }
+
+  .previous {
+    transform: rotate(180deg);
+    right: 95%;
+    margin-top: 9px;
+  }
+
+
 
   .past {
     opacity: 0.5;
@@ -53,9 +63,28 @@
     font-weight: bold;
   }
 
-  .future {
+  .nextMonth {
     opacity: 0.3;
   }
+
+  .future {
+    opacity: 1;
+    &:hover {
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 2px 6px 10px 0 #868686;
+    }
+  }
+}
+
+.month {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 50px;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .week {
@@ -66,11 +95,11 @@
   vertical-align: bottom;
 }
 
-
 @media (min-width: 1024px) {
   .Calendar {
     width: 360px;
     margin-bottom: 10px;
+    min-height: 420px;
     a {
       width: 45px;
       height: 45px;
@@ -80,7 +109,4 @@
   .week {
     width: 45px;
   }
-
 }
-
-

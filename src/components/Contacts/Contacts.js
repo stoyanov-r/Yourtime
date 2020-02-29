@@ -12,7 +12,7 @@ const Contacts = ({ winWidth }) => {
     <section className={classes.Contacts}>
       <WithWrapper>
         <h2 id='Contacts'>Контакты</h2>
-        <div className={classes.icons}>
+        <div className={[classes.icons, classes.first].join(' ')}>
           <Icons
             types={[
               { key: 'facebook', href: 'https://www.facebook.com/yourtime.coworking' },

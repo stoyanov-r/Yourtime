@@ -14,6 +14,16 @@ const PriceItem = ({ item }) => {
     slidesToScroll: 1,
     swipe: false,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 1,
+          infinite: true,
+          dots: false,
+        }
+      },
+    ]
   };
   return (
     <section className={classes.PriceItem}>

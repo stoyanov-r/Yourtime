@@ -26,11 +26,13 @@
       width: 44px;
       height: 44px;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain;
+      background-position: center;
     }
 
     &:hover {
       cursor: pointer;
+      opacity: 0.5;
     }
   }
 }
@@ -42,9 +44,10 @@ $Advantages__clses: "0", "1", "2", "3", "4", "5";
     background-image: url("/img/About__#{$item}.svg");
   }
 
-  li:hover.#{$item}::before {
-    background-image: url("/img/About__#{$item}--color.svg");
-  }
+  // li:hover.#{$item}::before {
+  //   // background-image: url("/img/About__#{$item}--color.svg");
+  //   // opacity: 0.5;
+  // }
 }
 
 @each $item in $Advantages__clses {
@@ -55,7 +58,7 @@ $Advantages__clses: "0", "1", "2", "3", "4", "5";
 
 @media (min-width: 1024px) {
   .List {
-    ul{
+    ul {
       justify-content: space-between;
     }
     li {

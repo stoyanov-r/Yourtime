@@ -16,7 +16,7 @@ const settings = {
   centerPadding: "60px",
   slidesToShow: 3,
   swipeToSlide: true,
-  arrow: false,
+  arrows: false,
   responsive: [
     {
       breakpoint: 1023,
