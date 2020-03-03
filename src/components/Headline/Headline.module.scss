@@ -3,7 +3,7 @@
   flex-direction: column;
   height: 330px;
   background: rgba(32, 33, 36, 0.6);
-  background-image: url("/img/Headline__bg.jpg");
+  background-image: url("/img/Headline/Headline__bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -34,6 +34,7 @@
   .button {
     margin: 0 auto;
     margin-bottom: 60px;
+
     a {
       display: inline-block;
       width: 290px;
@@ -61,7 +62,6 @@
 
   @media (min-width: 1024px) {
     margin-top: 65px;
-
     height: 500px;
     h1 {
       font-size: 60px;

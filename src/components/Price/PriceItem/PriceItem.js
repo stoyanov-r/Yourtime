@@ -1,37 +1,45 @@
 import React, { useState } from 'react';
 import Slider from "react-slick";
-import classes from './PriceItem.module.scss'
+
+import classes from './PriceItem.module.scss';
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  swipe: false,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 1,
+        infinite: true,
+        dots: false,
+      }
+    },
+  ],
+};
 
 const PriceItem = ({ item }) => {
 
   const [isMoreClicked, setisMoreClicked] = useState('false');
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    swipe: false,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 1023,
-        settings: {
-          slidesToShow: 1,
-          infinite: true,
-          dots: false,
-        }
-      },
-    ]
-  };
   return (
     <section className={classes.PriceItem}>
       <h3 id={item.id}>{item.title}</h3>
       <div className={classes.slider}>
         <Slider {...settings}>
           {item.sources.map((src, i) =>
-            <img alt={item.title} src={src} key={'img' + i} />
+            <div className={classes.imgWrapper}>
+              <img
+                alt={item.title}
+                src={src}
+                key={'img' + i}
+              />
+            </div>
           )}
         </Slider>
       </div>
@@ -58,6 +66,6 @@ const PriceItem = ({ item }) => {
       </div>
     </section>
   );
-}
+};
 
 export default PriceItem;

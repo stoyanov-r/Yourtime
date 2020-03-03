@@ -2,6 +2,7 @@
   position: relative;
   padding-bottom: 100px;
   padding-top: 35px;
+
   h2 {
     font-weight: 500;
     font-size: 24px;
@@ -16,11 +17,10 @@
   font-size: 18px;
   line-height: 35px;
   margin-bottom: 35px;
-  
-  @media(min-width: 1024px) {
-    width: 550px; 
-    margin-right: 4px; 
-    
+
+  @media (min-width: 1024px) {
+    width: 550px;
+    margin-right: 4px;
   }
   a {
     color: black;
@@ -30,14 +30,14 @@
       opacity: 0.5;
     }
   }
+}
 
-  .directions {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    margin-bottom: 0;
-  }
+.directions {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 .galleryWrapper {
@@ -46,8 +46,9 @@
 
 .button {
   display: none;
-  @media(min-width: 1024px) {
-    display: block; 
+
+  @media (min-width: 1024px) {
+    display: block;
     width: 352px;
     margin: 70px auto;
   }

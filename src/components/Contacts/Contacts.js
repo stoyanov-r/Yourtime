@@ -1,17 +1,19 @@
 import React from 'react';
-import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
+
 import classes from './Contacts.module.scss';
+import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
 import Icons from '../Icons/Icons';
-import Button from '../UI/Button/Button'
+import Button from '../UI/Button/Button';
 import Calendar from '../Calendar/Calendar';
+import Anchor from '../UI/Anchor/Anchor';
 
 const Contacts = ({ winWidth }) => {
-  console.log(winWidth);
 
   return (
     <section className={classes.Contacts}>
+      <Anchor anchor='Contacts' />
       <WithWrapper>
-        <h2 id='Contacts'>Контакты</h2>
+        <h2>Контакты</h2>
         <div className={[classes.icons, classes.first].join(' ')}>
           <Icons
             types={[
@@ -58,6 +60,6 @@ const Contacts = ({ winWidth }) => {
       </div>
     </section>
   );
-}
+};
 
 export default Contacts;

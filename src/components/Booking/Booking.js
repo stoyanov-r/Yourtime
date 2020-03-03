@@ -1,11 +1,14 @@
 import React from 'react';
+
 import classes from './Booking.module.scss';
-import WithWrapper from '../../hoc/WithWrapper/WithWrapper'
-import Icons from '../Icons/Icons'
+import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
+import Icons from '../Icons/Icons';
+import Anchor from '../UI/Anchor/Anchor';
 
 const Booking = () => {
   return (
-    <section>
+    <section className={classes.Booking}>
+      <Anchor anchor='Booking'/>
       <WithWrapper>
         <div className={classes.wrapper}>
           <h2>Как стать резидентом <span>YOURTIME</span>?</h2>
@@ -32,6 +35,6 @@ const Booking = () => {
       </WithWrapper>
     </section>
   );
-}
+};
 
 export default Booking;

@@ -1,18 +1,20 @@
 import React, { PureComponent } from 'react';
-import classes from './Price.module.scss'
-import PriceItem from './PriceItem/PriceItem';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
-// import { SampleNextArrow, SamplePrevArrow } from '../UI/Arrows/Arrows';
+
+import classes from './Price.module.scss'
+import PriceItem from './PriceItem/PriceItem';
 import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
 import Button from '../UI/Button/Button'
 import SliderButton from '../UI/SliderButton/SliderButton';
+import Anchor from '../UI/Anchor/Anchor';
 
 const settings = {
   className: "center",
   infinite: true,
   centerPadding: "60px",
+  slidesToScroll: 1,
   slidesToShow: 3,
   swipeToSlide: true,
   arrows: false,
@@ -35,11 +37,10 @@ const settings = {
 
 const createImageArray = (dest, count) => new Array(count)
   .fill('')
-  .map((_, i) => dest + i + '.jpg')
+  .map((_, i) => dest + i + '.jpg');
 
 
 const priceList = [
-
   {
     title: 'Студия парикмахера',
     id: 'Price__barber',
@@ -75,7 +76,7 @@ const priceList = [
     sources: createImageArray('/img/Price/Price__cosmetology--', 3),
     description: 'Отдельный кабинет с кушеткой – рай для лешмейкера, мастера перманентного макияжа, шугаринга, массажиста и смежных специальностей. Только вы и ваш клиент Бесплатно предоставляется: бациллол, стериллиум, бумажные полотенца, хлоргексидин, ватные диски, ватные палочки, лампа-лупа, косметологическая тележка, одноразовая простынь.'
   },
-]
+];
 
 class Price extends PureComponent {
 
@@ -83,20 +84,20 @@ class Price extends PureComponent {
     super(props);
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
-  }
+  };
 
   next() {
     this.slider.slickNext();
-  }
+  };
 
   previous() {
     this.slider.slickPrev();
-  }
+  };
 
   render() {
-
     return (
       <section className={classes.Price}>
+        <Anchor anchor='Price' />
         <WithWrapper>
           <h2>Цены</h2>
           <div className={classes.slider}>
@@ -109,16 +110,15 @@ class Price extends PureComponent {
             <div className={classes.next}>
               <SliderButton text='next' onClick={this.next} />
             </div>
-
           </div>
-
           <div className={classes.button}>
-            <Button id='Booking' />
+            <Button />
           </div>
         </WithWrapper>
+
       </section>
     );
-  }
-}
+  };
+};
 
 export default Price;

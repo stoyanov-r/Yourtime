@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
 }
+
 .Icon {
   display: block;
   width: 29px;
@@ -18,8 +19,8 @@
     cursor: pointer;
     opacity: 0.5;
   }
-
 }
+
 $Socials__clses: "instagram", "viber", "facebook", "telegram", "gps";
 
 @each $item in $Socials__clses {
@@ -40,9 +41,8 @@ $Socials__clses: "instagram", "viber", "facebook", "telegram", "gps";
 @media (min-width: 1024px) {
   .Icons {
     align-items: center;
-
-    .Icon {
-      margin-bottom: 0;
-    }
+  }
+  .Icon {
+    margin-bottom: 0;
   }
 }

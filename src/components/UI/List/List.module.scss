@@ -39,9 +39,10 @@
 
 $About__clses: "barber", "visage", "cosmetology", "lectory", "ceratin", "bar";
 $Advantages__clses: "0", "1", "2", "3", "4", "5";
+
 @each $item in $About__clses {
   .#{$item}::before {
-    background-image: url("/img/About__#{$item}.svg");
+    background-image: url("/img/About/About__#{$item}.svg");
   }
 
   // li:hover.#{$item}::before {
@@ -52,15 +53,17 @@ $Advantages__clses: "0", "1", "2", "3", "4", "5";
 
 @each $item in $Advantages__clses {
   .Advantages__#{$item}::before {
-    background-image: url("/img/Advantages__#{$item}.svg");
+    background-image: url("/img/Advantages/Advantages__#{$item}.svg");
   }
 }
 
 @media (min-width: 1024px) {
   .List {
+    
     ul {
       justify-content: space-between;
     }
+
     li {
       font-size: 16px;
       line-height: 24px;

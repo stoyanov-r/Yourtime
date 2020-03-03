@@ -1,5 +1,7 @@
 import React from 'react';
+
 import classes from './SliderButton.module.scss';
+
 
 const SliderButton = ({text, onClick}) => {
   return (
@@ -7,6 +9,6 @@ const SliderButton = ({text, onClick}) => {
         {text}
       </button>
   );
-}
+};
 
 export default SliderButton;

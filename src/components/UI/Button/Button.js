@@ -1,5 +1,6 @@
 import React from 'react';
-import classes from './Button.module.scss'
+
+import classes from './Button.module.scss';
 
 const Button = ({ text = 'Забронировать', id }) => {
   return (
@@ -11,6 +12,6 @@ const Button = ({ text = 'Забронировать', id }) => {
       {text}
     </a>
   );
-}
+};
 
 export default Button;

@@ -1,5 +1,6 @@
 import React from 'react';
-import classes from './Icons.module.scss'
+
+import classes from './Icons.module.scss';
 
 const Icons = ({ types = ['none'] }) => {
 
@@ -16,6 +17,6 @@ const Icons = ({ types = ['none'] }) => {
       })}
     </div>
   );
-}
+};
 
 export default Icons;

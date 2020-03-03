@@ -1,4 +1,5 @@
 import React from 'react';
+
 import classes from './Footer.module.scss';
 import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
 
@@ -15,6 +16,6 @@ const Footer = () => {
       </WithWrapper>
     </footer>
   );
-}
+};
 
 export default Footer;

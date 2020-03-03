@@ -1,3 +1,7 @@
+.Booking {
+  position: relative;
+  padding-top: 35px;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -17,7 +21,7 @@
       text-align: center;
     }
   }
-  
+
   p {
     text-align: center;
     padding: 0;
@@ -25,7 +29,8 @@
     line-height: 35px;
   }
 
-  p a, ol a {
+  p a,
+  ol a {
     text-decoration: none;
     color: #000000;
     font-weight: bold;
@@ -72,13 +77,14 @@
 @media (min-width: 1024px) {
   .wrapper {
     padding: 30px 12px;
+
     h2 {
       margin-bottom: 5px;
     }
+    
     ol {
       flex-direction: row;
-      margin-top: 60px;
-      margin-bottom: 30px;
+      margin: 30px auto;
     }
 
     p {

@@ -1,7 +1,8 @@
 .Price {
   width: 100%;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 35px;
+  position: relative;
 
   h2 {
     width: 100%;
@@ -26,7 +27,7 @@
 .previous,
 .next {
   position: absolute;
-  top: 338px;
+  top: 342px;
   z-index: 5;
   right: 0;
   :hover {
@@ -37,7 +38,7 @@
 
 .previous {
   transform: rotate(180deg);
-  top: 342px;
+  top: 346px;
   right: auto;
   left: 0;
 }
@@ -53,6 +54,7 @@
   .slider {
     width: 944px;
   }
+  
   .button {
     display: block;
     width: 384px;

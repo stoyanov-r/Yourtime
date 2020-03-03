@@ -1,14 +1,15 @@
 import React, { PureComponent } from 'react';
-import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
 import Slider from 'react-slick';
-import classes from './Reviews.module.scss';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
+
+import classes from './Reviews.module.scss';
+import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
 import SliderButton from '../UI/SliderButton/SliderButton';
 
 const images = new Array(5)
   .fill('')
-  .map((_, i) => `/img/Reviews/Reviews--${i}.jpg`)
+  .map((_, i) => `/img/Reviews/Reviews--${i}.jpg`);
 
 const settings = {
   className: "center",
@@ -40,15 +41,15 @@ class Reviews extends PureComponent {
     super(props);
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
-  }
+  };
 
   next() {
     this.slider.slickNext();
-  }
+  };
 
   previous() {
     this.slider.slickPrev();
-  }
+  };
 
   render() {
     return (
@@ -61,10 +62,9 @@ class Reviews extends PureComponent {
             </div>
             <Slider ref={c => (this.slider = c)} {...settings}>
               {images.map((img, i) =>
-                <div className={classes.img} key={'review-' + i}><img
-                  src={img}
-                  alt={'Отзывы наших посетителей'}
-                /> </div>)}
+                <div className={classes.img} key={'review-' + i}>
+                  <img src={img} alt={'Отзывы наших посетителей'} />
+                </div>)}
             </Slider>
             <div className={classes.next}>
               <SliderButton onClick={this.next} />
@@ -73,7 +73,7 @@ class Reviews extends PureComponent {
         </WithWrapper>
       </section>
     );
-  }
-}
+  };
+};
 
 export default Reviews;
