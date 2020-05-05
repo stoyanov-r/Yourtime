@@ -7,7 +7,7 @@ import classes from './Reviews.module.scss';
 import WithWrapper from '../../hoc/WithWrapper/WithWrapper';
 import SliderButton from '../UI/SliderButton/SliderButton';
 
-const images = new Array(5)
+const images = new Array(11)
   .fill('')
   .map((_, i) => `/img/Reviews/Reviews--${i}.jpg`);
 
