@@ -33,11 +33,13 @@ const PriceItem = ({ item }) => {
       <div className={classes.slider}>
         <Slider {...settings}>
           {item.sources.map((src, i) =>
-            <div className={classes.imgWrapper}>
+            <div className={classes.imgWrapper}
+              key={'img' + i}
+
+            >
               <img
                 alt={item.title}
                 src={src}
-                key={'img' + i}
               />
             </div>
           )}

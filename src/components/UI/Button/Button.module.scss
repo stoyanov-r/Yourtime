@@ -17,6 +17,7 @@
   &:hover {
     cursor: pointer;
     position: relative;
+    color: white;
     &::after {
       content: '';
       display: inline-block;

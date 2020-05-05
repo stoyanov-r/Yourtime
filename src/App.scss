@@ -1,0 +1,19 @@
+@import "~bootstrap/scss/bootstrap";
+
+a:hover {
+  color: initial;
+  text-decoration: none;
+}
+
+.modal-backdrop.show {
+  opacity: 0.8;
+}
+.modal.show {
+  padding-left: 0 !important;
+}
+
+.modal-dialog {
+  max-width: none;
+  margin: 5vh auto;
+  width: 80vw;
+}
