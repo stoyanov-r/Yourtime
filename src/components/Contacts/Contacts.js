@@ -26,7 +26,7 @@ const Contacts = ({ winWidth }) => {
           <Icons
             types={[
               { key: 'viber', href: 'viber://add?number=380632430644' },
-              { key: 'telegram', href: 'tg://resolve?domain=roman_stoyanov' }
+              { key: 'telegram', href: 'tg://resolve?domain=yourtime_beauty' }
             ]} />
           <a className={classes.link} href='tel: +380632430644'>+380632430644</a>
         </div>
