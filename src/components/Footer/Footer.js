@@ -11,10 +11,10 @@ const Footer = () => {
   return (
     <footer className={classes.Footer}>
       <WithWrapper>
-        <p>YOURTIME | Beauty-coworking 2019-{now.getFullYear()}</p>
+        <div className="item">YOURTIME | Beauty-coworking 2019-{now.getFullYear()}</div>
         {/* <p><a href='#Price__headline'>Условия Аренды</a></p> */}
-        <p><ModalPolicy /></p>
-        <p>Developed by <a href='https://www.linkedin.com/in/roman-stoyanov/'> Stoyanov Roman</a></p>
+        <div className="item"><ModalPolicy /></div>
+        <div className="item">Developed by <a href='https://www.linkedin.com/in/roman-stoyanov/'> Stoyanov Roman</a></div>
       </WithWrapper>
     </footer>
   );

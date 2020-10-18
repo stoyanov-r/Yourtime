@@ -14,7 +14,7 @@ const Booking = () => {
           <h2>Как стать резидентом <span>YOURTIME</span>?</h2>
           <p> Для этого Вам понадобится не больше минуты</p>
           <ol>
-            <li><span>1</span>Перейдите по  <a href='https://clients.aihelps.com/110043'>ссылке</a></li>
+            <li><span>1</span>Перейдите по  <a href='https://beautyprosoftware.com/b/110043'>ссылке</a></li>
             <li><span>2</span>Выберите длительность аренды</li>
             <li><span>3</span>Выберете свободное время и место онлайн</li>
             <li><span>4</span>Укажите свой номер телефона и имя</li>

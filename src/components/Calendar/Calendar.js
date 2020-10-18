@@ -23,7 +23,7 @@ const dates = (days, firstDay) => new Array(days)
   .map((_, i) => i + firstDay);
 
 const today = new Date();
-const bookingHref = 'https://clients.aihelps.com/110043';
+const bookingHref = 'https://beautyprosoftware.com/b/110043';
 const FIRST_DAY = 1;
 const DAY_PER_WEEK = 7;
 
