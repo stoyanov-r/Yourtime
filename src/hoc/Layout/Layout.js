@@ -11,6 +11,7 @@ import Contacts from '../../components/Contacts/Contacts';
 import Reviews from '../../components/Reviews/Reviews';
 import Footer from '../../components/Footer/Footer';
 import TopButton from '../../components/UI/TopButton/TopButton';
+import ModalPolicy from '../../components/ModalPolicy/ModalPolicy';
 
 
 export class Layout extends Component {
