@@ -6,7 +6,7 @@
   font-size: 13px;
   line-height: 35px;
 
-  p {
+  .item {
     width: 100%;
     margin: 10px auto;
     text-align: center;
@@ -25,7 +25,7 @@
 @media (min-width: 1024px) {
   .Footer {
     justify-content: space-between;
-    p {
+    .item {
       width: 30%;
     }
   }
